@@ -13,7 +13,8 @@
     "babel-preset-react": "latest"
   },
   "scripts": {
-    "browserify": "browserify ./js/main.js -o ./bundle/bundle.js -t [ babelify --presets [ es2015 react ] ]",
+    "mkdirp:bundle": "mkdir -p bundle",
+    "browserify": "npm run mkdirp:bundle && browserify ./js/main.js -o ./bundle/bundle.js -t [ babelify --presets [ es2015 react ] ]",
     "watch:js": "watch 'npm run browserify' ./js/",
     "server": "parallelshell 'npm run watch:js' 'browser-sync start --server ./ --files ./build index.html'"
   }
