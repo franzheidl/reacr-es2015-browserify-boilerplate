@@ -1,0 +1,20 @@
+{
+  "name": "link-accounts-list",
+  "version": "0.0.1",
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest",
+    "browserify": "latest",
+    "browser-sync": "latest",
+    "watch": "latest",
+    "parallelshell": "latest",
+    "babelify": "latest",
+    "babel-preset-es2015": "latest",
+    "babel-preset-react": "latest"
+  },
+  "scripts": {
+    "browserify": "browserify ./js/main.js -o ./bundle/bundle.js -t [ babelify --presets [ es2015 react ] ]",
+    "watch:js": "watch 'npm run browserify' ./js/",
+    "server": "parallelshell 'npm run watch:js' 'browser-sync start --server ./ --files ./build index.html'"
+  }
+}
