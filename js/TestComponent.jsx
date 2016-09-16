@@ -1,10 +1,12 @@
 var React = require('react');
 
-module.exports =  React.createClass({
+var TestComponent =  React.createClass({
   render: function() {
     return (
       <div>Test Component</div>
     );
   }
 });
+
+module.exports = TestComponent;
   
