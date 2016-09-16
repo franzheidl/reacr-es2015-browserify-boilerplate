@@ -1,5 +1,5 @@
 {
-  "name": "link-accounts-list",
+  "name": "react-es2015-browserify-boilerplate",
   "version": "0.0.1",
   "dependencies": {
     "react": "latest",
